@@ -1,0 +1,15 @@
+version: "2.1"
+services:
+  grafana:
+    image: docker.io/grafana/grafana-oss:latest
+    container_name: grafana
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Athens
+    volumes:
+      - /opt/appdata/grafana:/var/lib/grafana
+    ports:
+      - 3030:3000
+    restart: unless-stopped
+

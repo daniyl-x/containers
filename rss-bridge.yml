@@ -1,0 +1,15 @@
+version: "2.1"
+services:
+  rss-bridge:
+    image: docker.io/rssbridge/rss-bridge:latest
+    container_name: rss-bridge
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Athens
+    volumes:
+      - /opt/appdata/rss-bridge:/config
+    ports:
+      - 8081:80
+    restart: unless-stopped
+

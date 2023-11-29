@@ -1,0 +1,17 @@
+version: "2.1"
+services:
+  node-exporter:
+    image: quay.io/prometheus/node-exporter:latest
+    container_name: node-exporter
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Athens
+    command:
+      - "--path.rootfs=/host"
+    volumes:
+      - /:/host:ro,rslave
+    ports:
+      - 9100:9100
+    restart: unless-stopped
+
