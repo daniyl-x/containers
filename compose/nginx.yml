@@ -1,4 +1,5 @@
 version: "2.1"
+
 services:
   nginx:
     image: lscr.io/linuxserver/nginx:latest
