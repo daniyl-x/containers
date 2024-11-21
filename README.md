@@ -1,9 +1,9 @@
-# Container-compose
+# Containers
 *This repository contains YAML files for use with podman-compose
 or docker-compose.*
 
-All of these files contain configurations, specific for my needs,
-so you should use them as an example only .
+All of these files may contain configuration, specific for my needs,
+so you should use them as an example only.
 
 
 ## Table of Contents
