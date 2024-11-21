@@ -1,5 +1,18 @@
 version: "2.1"
 services:
+  commafeed:
+    image: docker.io/athou/commafeed:latest
+    container_name: commafeed
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Athens
+    volumes:
+      - /opt/appdata/commafeed:/commafeed/data
+    ports:
+      - 8082:8082
+    restart: unless-stopped
+
   rss-bridge:
     image: docker.io/rssbridge/rss-bridge:latest
     container_name: rss-bridge
