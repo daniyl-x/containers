@@ -1,7 +1,20 @@
 # Container-compose
-*This repository contains YAML files for use with podman-compose and docker-compose.*
+*This repository contains YAML files for use with podman-compose
+or docker-compose.*
 
-All of this files contain configurations, specific for my needs, so you should use them only as example.
+All of these files contain configurations, specific for my needs,
+so you should use them as an example only .
+
+
+## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+- [Credits](#credits)
+
+
+## Installation
+1. Ensure podman-compose or docker-compose are installed
+2. Clone this repo
 
 
 ## Usage:
@@ -10,6 +23,6 @@ All of this files contain configurations, specific for my needs, so you should u
 - [Docker & docker-compose](https://docs.docker.com/compose/)
 
 
-## Based on
-General template for the files and most of the images are from the [linuxserver.io](https://docs.linuxserver.io) project.
+## Credits
+- linuxserver.io for their images and documentation
 
