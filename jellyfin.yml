@@ -10,7 +10,6 @@ services:
     volumes:
       - /opt/appdata/jellyfin:/config
       - /mnt/media/Anime:/data/anime
-      - /mnt/media/Books:/data/books
       - /mnt/media/Cartoons:/data/cartoons
       - /mnt/media/Series:/data/series
       - /mnt/media/Movies:/data/movies
