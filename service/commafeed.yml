@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  commafeed:
+    image: docker.io/athou/commafeed:latest
+    container_name: commafeed
+    extends:
+      file: ../base.yml
+      service: base_service
+    volumes:
+      - /opt/appdata/commafeed:/commafeed/data
+    ports:
+      - 8082:8082
+

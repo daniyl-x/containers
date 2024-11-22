@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  node-exporter:
+    image: quay.io/prometheus/node-exporter:latest
+    container_name: node-exporter
+    extends:
+      file: ../base.yml
+      service: base_service
+    command:
+      - "--path.rootfs=/host"
+    volumes:
+      - /:/host:ro,rslave
+

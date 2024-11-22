@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  rss-bridge:
+    image: docker.io/rssbridge/rss-bridge:latest
+    container_name: rss-bridge
+    extends:
+      file: ../base.yml
+      service: base_service
+    volumes:
+      - /opt/appdata/rss-bridge:/config
+    ports:
+      - 8081:80
+

@@ -1,36 +1,7 @@
 version: "3"
 
-services:
-  grafana:
-    image: docker.io/grafana/grafana-oss:latest
-    container_name: grafana
-    extends:
-      file: ../base.yml
-      service: base_service
-    volumes:
-      - /opt/appdata/grafana:/var/lib/grafana
-    ports:
-      - 3030:3000
-
-  prometheus:
-    image: docker.io/prom/prometheus:latest
-    container_name: prometheus
-    extends:
-      file: ../base.yml
-      service: base_service
-    volumes:
-      - /opt/appdata/prometheus:/etc/prometheus
-    ports:
-      - 9092:9090
-
-  node-exporter:
-    image: quay.io/prometheus/node-exporter:latest
-    container_name: node-exporter
-    extends:
-      file: ../base.yml
-      service: base_service
-    command:
-      - "--path.rootfs=/host"
-    volumes:
-      - /:/host:ro,rslave
+include:
+  - ../service/grafana.yml
+  - ../service/prometheus.yml
+  - ../service/node-exporter.yml
 

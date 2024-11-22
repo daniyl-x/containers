@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  prometheus:
+    image: docker.io/prom/prometheus:latest
+    container_name: prometheus
+    extends:
+      file: ../base.yml
+      service: base_service
+    volumes:
+      - /opt/appdata/prometheus:/etc/prometheus
+    ports:
+      - 9092:9090
+

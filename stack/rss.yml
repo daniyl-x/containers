@@ -1,25 +1,6 @@
 version: "3"
 
-services:
-  commafeed:
-    image: docker.io/athou/commafeed:latest
-    container_name: commafeed
-    extends:
-      file: ../base.yml
-      service: base_service
-    volumes:
-      - /opt/appdata/commafeed:/commafeed/data
-    ports:
-      - 8082:8082
-
-  rss-bridge:
-    image: docker.io/rssbridge/rss-bridge:latest
-    container_name: rss-bridge
-    extends:
-      file: ../base.yml
-      service: base_service
-    volumes:
-      - /opt/appdata/rss-bridge:/config
-    ports:
-      - 8081:80
+include:
+  - ../service/commafeed.yml
+  - ../service/rss-bridge.yml
 
