@@ -10,6 +10,7 @@ so you should use them as an example only.
 - [Installation](#installation)
 - [Usage](#usage)
 - [Credits](#credits)
+- [License](#license)
 
 
 ## Installation
@@ -25,4 +26,9 @@ so you should use them as an example only.
 
 ## Credits
 - linuxserver.io for their images and documentation
+
+
+## License
+This project is licensed under the BSD Zero Clause License.
+See the [LICENSE](LICENSE) file for details.
 
