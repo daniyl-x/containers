@@ -4,14 +4,12 @@ services:
   nginx:
     image: lscr.io/linuxserver/nginx:latest
     container_name: nginx
-    environment:
-      - PUID=1000
-      - PGID=1000
-      - TZ=Europe/Athens
+    extends:
+      file: ../base.yml
+      service: base_service
     volumes:
       - /opt/appdata/nginx:/config
     ports:
       - 80:80
       - 443:443
-    restart: unless-stopped
 

@@ -4,10 +4,9 @@ services:
   jellyfin:
     image: lscr.io/linuxserver/jellyfin:latest
     container_name: jellyfin
-    environment:
-      - PUID=1000
-      - PGID=1000
-      - TZ=Europe/Athens
+    extends:
+      file: ../base.yml
+      service: base_service
     volumes:
       - /opt/appdata/jellyfin:/config
       - /mnt/media/Anime:/data/anime
@@ -16,5 +15,4 @@ services:
       - /mnt/media/Movies:/data/movies
     ports:
       - 8096:8096
-    restart: unless-stopped
 

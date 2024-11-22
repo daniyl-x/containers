@@ -4,10 +4,10 @@ services:
   qbittorrent:
     image: lscr.io/linuxserver/qbittorrent:latest
     container_name: qbittorrent
+    extends:
+      file: ../base.yml
+      service: base_service
     environment:
-      - PUID=1000
-      - PGID=1000
-      - TZ=Europe/Athens
       - WEBUI_PORT=9091
     volumes:
       - /opt/appdata/qbittorrent:/config
@@ -16,5 +16,4 @@ services:
       - 9091:9091
       - 6881:6881
       - 6881:6881/udp
-    restart: unless-stopped
 

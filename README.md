@@ -9,6 +9,7 @@ so you should use them as an example only.
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
+    - [base.yml](#base.yml)
 - [Credits](#credits)
 - [License](#license)
 
@@ -22,6 +23,18 @@ so you should use them as an example only.
 - [Podman](https://docs.podman.io/en/latest/markdown/podman-compose.1.html)
 - [podman-compose](https://github.com/containers/podman-compose)
 - [Docker & docker-compose](https://docs.docker.com/compose/)
+
+### base.yml
+This file defines the base_service that is used by all other compose files. \
+It's used to define default environment variables and restart policy.
+
+To use it in a new compose file you should include the next block
+in each service:
+```yml
+extends:
+  file: ../base.yml
+  service: base_service
+```
 
 
 ## Credits

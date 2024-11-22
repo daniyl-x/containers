@@ -4,14 +4,12 @@ services:
   homepage:
     image: ghcr.io/benphelps/homepage:latest
     container_name: benphelps-homepage
-    environment:
-      - PUID=1000
-      - PGID=1000
-      - TZ=Europe/Athens
+    extends:
+      file: ../base.yml
+      service: base_service
     volumes:
       - /opt/appdata/benphelps-homepage:/app/config
       - $XDG_RUNTIME_DIR/podman/podman.sock:/var/run/docker.sock
     ports:
       - 3000:3000
-    restart: unless-stopped
 
