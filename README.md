@@ -10,6 +10,8 @@ so you should use them as an example only.
 - [Installation](#installation)
 - [Usage](#usage)
     - [base.yml](#base.yml)
+    - [service/](#service)
+    - [stack/](#stack)
 - [Credits](#credits)
 - [License](#license)
 
@@ -35,6 +37,12 @@ extends:
   file: ../base.yml
   service: base_service
 ```
+
+### service/
+This directory contains single-service compose files.
+
+### stack/
+This directory contains multi-service compose files.
 
 
 ## Credits
