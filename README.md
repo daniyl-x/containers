@@ -9,7 +9,7 @@ so you should use them as an example only.
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
-    - [.env](#.env)
+    - [.env](#env)
     - [service/](#service)
     - [stack/](#stack)
 - [Credits](#credits)

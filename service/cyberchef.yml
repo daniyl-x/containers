@@ -1,7 +1,7 @@
 version: "3"
 
 services:
-  jellyfin:
+  cyberchef:
     image: docker.io/mpepping/cyberchef:latest
     container_name: cyberchef
     environment:
