@@ -2,7 +2,7 @@ version: "3"
 
 services:
   commafeed:
-    image: docker.io/athou/commafeed:latest
+    image: docker.io/athou/commafeed:latest-h2
     container_name: commafeed
     extends:
       file: ../base.yml
