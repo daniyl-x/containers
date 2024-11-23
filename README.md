@@ -1,6 +1,7 @@
 # Containers
-*This repository contains YAML files for use with podman-compose
-or docker-compose.*
+*This repository contains container-related files like compose files
+for use with podman-compose or docker-compose,
+container-specific configurations, etc.*
 
 All of these files may contain configuration, specific for my needs,
 so you should use them as an example only.
@@ -9,9 +10,6 @@ so you should use them as an example only.
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
-    - [.env](#env)
-    - [service/](#service)
-    - [stack/](#stack)
 - [Credits](#credits)
 - [License](#license)
 
@@ -30,19 +28,6 @@ so you should use them as an example only.
 - [Podman](https://docs.podman.io/en/latest/markdown/podman-compose.1.html)
 - [podman-compose](https://github.com/containers/podman-compose)
 - [Docker & docker-compose](https://docs.docker.com/compose/)
-
-### .env
-This .env file defines the default values that are then used by all other
-compose files. \
-It includes some basic environment variables, bind volume prefix,
-restart policy, as well as exposed ports for specific services, etc.
-
-### service/
-This directory contains single-service compose files.
-
-### stack/
-This directory contains multi-service compose files
-and reuses single-service ones.
 
 
 ## Credits
