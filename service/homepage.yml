@@ -4,12 +4,14 @@ services:
   homepage:
     image: ghcr.io/gethomepage/homepage:latest
     container_name: homepage
-    extends:
-      file: ../base.yml
-      service: base_service
+    environment:
+      PUID: "${PUID}"
+      PGID: "${PGID}"
+      TZ: "${TZ}"
     volumes:
-      - /opt/appdata/homepage:/app/config
+      - "${VOLUME_PREFIX}/homepage:/app/config"
       - $XDG_RUNTIME_DIR/podman/podman.sock:/var/run/docker.sock
     ports:
       - 3000:3000
+    restart: "${RESTART_POLICY}"
 

@@ -5,11 +5,13 @@ services:
     image: docker.io/grafana/grafana-oss:latest
     container_name: grafana
     user: "0:0"
-    extends:
-      file: ../base.yml
-      service: base_service
+    environment:
+      PUID: "${PUID}"
+      PGID: "${PGID}"
+      TZ: "${TZ}"
     volumes:
-      - /opt/appdata/grafana:/var/lib/grafana
+      - "${VOLUME_PREFIX}/grafana:/var/lib/grafana"
     ports:
       - 3030:3000
+    restart: "${RESTART_POLICY}"
 

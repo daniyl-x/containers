@@ -4,14 +4,16 @@ services:
   syncthing:
     image: lscr.io/linuxserver/syncthing:latest
     container_name: syncthing
-    extends:
-      file: ../base.yml
-      service: base_service
+    environment:
+      PUID: "${PUID}"
+      PGID: "${PGID}"
+      TZ: "${TZ}"
     volumes:
-      - /opt/appdata/syncthing:/config
+      - "${VOLUME_PREFIX}/syncthing:/config"
     ports:
       - 8384:8384
       - 22000:22000
       - 22000:22000/udp
       - 21027:21027/udp
+    restart: "${RESTART_POLICY}"
 

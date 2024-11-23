@@ -5,10 +5,10 @@ services:
     image: docker.io/mpepping/cyberchef:latest
     container_name: cyberchef
     environment:
-      - PUID=1000
-      - PGID=1000
-      - TZ=Europe/Athens
+      PUID: "${PUID}"
+      PGID: "${PGID}"
+      TZ: "${TZ}"
     ports:
       - 8001:8000
-    restart: unless-stopped
+    restart: "${RESTART_POLICY}"
 

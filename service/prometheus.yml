@@ -4,11 +4,13 @@ services:
   prometheus:
     image: docker.io/prom/prometheus:latest
     container_name: prometheus
-    extends:
-      file: ../base.yml
-      service: base_service
+    environment:
+      PUID: "${PUID}"
+      PGID: "${PGID}"
+      TZ: "${TZ}"
     volumes:
-      - /opt/appdata/prometheus:/etc/prometheus
+      - "${VOLUME_PREFIX}/prometheus:/etc/prometheus"
     ports:
       - 9092:9090
+    restart: "${RESTART_POLICY}"
 

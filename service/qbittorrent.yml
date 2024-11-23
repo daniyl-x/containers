@@ -4,16 +4,17 @@ services:
   qbittorrent:
     image: lscr.io/linuxserver/qbittorrent:latest
     container_name: qbittorrent
-    extends:
-      file: ../base.yml
-      service: base_service
     environment:
-      - WEBUI_PORT=9091
+      PUID: "${PUID}"
+      PGID: "${PGID}"
+      TZ: "${TZ}"
+      WEBUI_PORT: 9091
     volumes:
-      - /opt/appdata/qbittorrent:/config
+      - "${VOLUME_PREFIX}/qbittorrent:/config"
       - /mnt/media/Downloads:/downloads
     ports:
       - 9091:9091
       - 6881:6881
       - 6881:6881/udp
+    restart: "${RESTART_POLICY}"
 

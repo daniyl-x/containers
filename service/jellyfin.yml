@@ -4,15 +4,17 @@ services:
   jellyfin:
     image: lscr.io/linuxserver/jellyfin:latest
     container_name: jellyfin
-    extends:
-      file: ../base.yml
-      service: base_service
+    environment:
+      PUID: "${PUID}"
+      PGID: "${PGID}"
+      TZ: "${TZ}"
     volumes:
-      - /opt/appdata/jellyfin:/config
+      - "${VOLUME_PREFIX}/jellyfin:/config"
       - /mnt/media/Anime:/data/anime
       - /mnt/media/Cartoons:/data/cartoons
       - /mnt/media/Series:/data/series
       - /mnt/media/Movies:/data/movies
     ports:
       - 8096:8096
+    restart: "${RESTART_POLICY}"
 

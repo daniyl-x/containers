@@ -9,7 +9,7 @@ so you should use them as an example only.
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
-    - [base.yml](#base.yml)
+    - [.env](#.env)
     - [service/](#service)
     - [stack/](#stack)
 - [Credits](#credits)
@@ -31,17 +31,11 @@ so you should use them as an example only.
 - [podman-compose](https://github.com/containers/podman-compose)
 - [Docker & docker-compose](https://docs.docker.com/compose/)
 
-### base.yml
-This file defines the base_service that is used by all other compose files. \
-It's used to define default environment variables and restart policy.
-
-To use it in a new compose file you should include the next block
-in each service:
-```yml
-extends:
-  file: ../base.yml
-  service: base_service
-```
+### .env
+This .env file defines the default values that are then used by all other
+compose files. \
+It includes some basic environment variables, bind volume prefix,
+restart policy, as well as exposed ports for specific services, etc.
 
 ### service/
 This directory contains single-service compose files.

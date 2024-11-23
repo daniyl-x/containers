@@ -1,0 +1,3 @@
+# Do not exclude .env
+!.env
+
