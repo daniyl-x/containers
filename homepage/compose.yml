@@ -5,8 +5,7 @@ services:
     image: ghcr.io/gethomepage/homepage:latest
     container_name: homepage
     environment:
-      PUID: "${PUID}"
-      PGID: "${PGID}"
+      # No PUID/PGID to own volumes
       TZ: "${TZ}"
     volumes:
       - "${VOLUME_PREFIX}/homepage:/app/config"
