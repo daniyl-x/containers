@@ -1,0 +1,27 @@
+# Style
+title: Homepage
+color: zinc
+headerStyle: clean
+statusStyle: dot
+
+# Open links in new tabs
+target: _blank
+
+
+layout:
+  # Services
+  Media: &s1
+    style: rows
+    columns: 2
+  Monitoring: *s1
+  Tools:
+    style: row
+    columns: 4
+
+  # Bookmarks
+  Documentation: &bm
+    style: column
+    rows: 2
+  AI: *bm
+  Other: *bm
+

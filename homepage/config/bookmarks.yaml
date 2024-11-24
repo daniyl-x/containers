@@ -1,0 +1,29 @@
+- AI:
+  - DuckDuckGo Chat:
+    - abbr: DDG
+      href: https://duck.ai
+
+  - Copilot:
+    - abbr: MS
+      href: https://copilot.microsoft.com 
+
+
+- Documentation:
+  - homepage:
+    - abbr: HP
+      href: https://gethomepage.dev
+
+  - linuxserver.io:
+    - abbr: LS
+      href: https://docs.linuxserver.io
+
+
+- Other:
+  - My GitHub:
+    - abbr: GH
+      href: https://github.com/daniyl-x
+
+  - IMDb:
+    - abbr: IMDb
+      href: https://imdb.com
+

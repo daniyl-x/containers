@@ -1,0 +1,45 @@
+- Media:
+  - Jellyfin:
+      icon: jellyfin
+      href: http://localhost/
+      description: Media system
+
+  - CommaFeed:
+      icon: commafeed
+      href: http://localhost/
+      description: RSS reader
+
+
+- Monitoring:
+  - Grafana:
+      icon: grafana
+      href: http://localhost/
+      description: Data analytics
+
+  - Prometheus:
+      icon: prometheus
+      href: http://localhost/
+      description: Event monitoring
+
+
+- Tools:
+  - qBitTorrent:
+      icon: qbittorrent
+      href: http://localhost/
+      description: Torrent client
+
+  - CyberChef:
+      icon: cyberchef
+      href: http://localhost/
+      description: Cyber Swiss Army Knife
+
+  - Syncthing:
+      icon: syncthing
+      href: http://localhost/
+      description: File synchronization
+
+  - RSS-Bridge:
+      icon: rss-bridge
+      href: http://localhost/
+      description: RSS feed generator
+
