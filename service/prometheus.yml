@@ -9,7 +9,7 @@ services:
       PGID: "${PGID}"
       TZ: "${TZ}"
     volumes:
-      - "${VOLUME_PREFIX}/prometheus:/etc/prometheus"
+      - "../config/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml"
     ports:
       - 9092:9090
     restart: "${RESTART_POLICY}"
