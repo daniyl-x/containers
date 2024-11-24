@@ -1,7 +1,0 @@
-version: "3"
-
-include:
-  - ../service/grafana.yml
-  - ../service/prometheus.yml
-  - ../service/node-exporter.yml
-

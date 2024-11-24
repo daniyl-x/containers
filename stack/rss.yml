@@ -1,6 +1,0 @@
-version: "3"
-
-include:
-  - ../service/commafeed.yml
-  - ../service/rss-bridge.yml
-
