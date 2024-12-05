@@ -2,7 +2,7 @@ version: "3"
 
 services:
   cyberchef:
-    image: docker.io/mpepping/cyberchef:latest
+    image: ghcr.io/gchq/cyberchef:latest
     container_name: cyberchef
     environment:
       PUID: "${PUID}"
