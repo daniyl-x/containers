@@ -9,7 +9,7 @@ services:
       TZ: "${TZ}"
     volumes:
       - "${VOLUME_PREFIX}/homepage:/app/config"
-      - $XDG_RUNTIME_DIR/podman/podman.sock:/var/run/docker.sock
+      - "${XDG_RUNTIME_DIR}/podman/podman.sock:/var/run/docker.sock"
     ports:
       - 3000:3000
     restart: "${RESTART_POLICY}"
