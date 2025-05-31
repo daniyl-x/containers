@@ -2,16 +2,14 @@ version: "3"
 
 services:
   nginx:
-    image: lscr.io/linuxserver/nginx:latest
+    image: docker.io/library/nginx:latest
     container_name: nginx
-    environment:
-      PUID: "${PUID}"
-      PGID: "${PGID}"
-      TZ: "${TZ}"
     volumes:
-      - "${VOLUME_PREFIX}/nginx:/config"
+      - "./config/proxy_headers.conf:/etc/nginx/proxy_headers.conf:ro"
+      - "./config/conf.d:/etc/nginx/conf.d:ro"
     ports:
       - 80:80
       - 443:443
+    network_mode: host
     restart: "${RESTART_POLICY}"
 

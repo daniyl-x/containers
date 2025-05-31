@@ -9,6 +9,7 @@ services:
     environment:
       TZ: "${TZ}"
     volumes:
+      - "./config/grafana.ini:/etc/grafana/grafana.ini:ro"
       - "${VOLUME_PREFIX}/grafana:/var/lib/grafana"
     ports:
       - 3030:3000
