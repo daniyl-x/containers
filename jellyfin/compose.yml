@@ -10,10 +10,10 @@ services:
       TZ: "${TZ}"
     volumes:
       - "${VOLUME_PREFIX}/jellyfin:/config"
-      - "${MEDIA_PREFIX}/anime:/data/anime"
-      - "${MEDIA_PREFIX}/cartoons:/data/cartoons"
-      - "${MEDIA_PREFIX}/series:/data/series"
-      - "${MEDIA_PREFIX}/movies:/data/movies"
+      - "${MEDIA_PREFIX}/anime:/data/anime:ro"
+      - "${MEDIA_PREFIX}/cartoons:/data/cartoons:ro"
+      - "${MEDIA_PREFIX}/movies:/data/movies:ro"
+      - "${MEDIA_PREFIX}/series:/data/series:ro"
     ports:
       - 8096:8096
     restart: "${RESTART_POLICY}"
