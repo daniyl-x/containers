@@ -12,9 +12,10 @@ services:
       # Hosts to listen on besides localhost
       HOMEPAGE_ALLOWED_HOSTS: "*"
     volumes:
+      - "./config/bookmarks.yaml:/app/config/bookmarks.yaml:ro"
+      - "./config/docker.yaml:/app/config/docker.yaml:ro"
       - "./config/services.yaml:/app/config/services.yaml:ro"
       - "./config/settings.yaml:/app/config/settings.yaml:ro"
-      - "./config/bookmarks.yaml:/app/config/bookmarks.yaml:ro"
 
       - "${VOLUME_PREFIX}/homepage:/app/config"
       - "${SOCKET}:/var/run/docker.sock:ro"
