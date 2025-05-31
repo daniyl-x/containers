@@ -5,9 +5,17 @@ services:
     image: ghcr.io/gethomepage/homepage:latest
     container_name: homepage
     environment:
-      # No PUID/PGID to own volumes
+      # Doesn't work for files
+      PUID: "${PUID}"
+      PGID: "${PGID}"
       TZ: "${TZ}"
+      # Hosts to listen on besides localhost
+      HOMEPAGE_ALLOWED_HOSTS: "*"
     volumes:
+      - "./config/services.yaml:/app/config/services.yaml:ro"
+      - "./config/settings.yaml:/app/config/settings.yaml:ro"
+      - "./config/bookmarks.yaml:/app/config/bookmarks.yaml:ro"
+
       - "${VOLUME_PREFIX}/homepage:/app/config"
       - "${XDG_RUNTIME_DIR}/podman/podman.sock:/var/run/docker.sock"
     ports:
