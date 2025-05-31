@@ -1,5 +1,3 @@
-version: "3"
-
 # Passing no environment variables since container doesn't use them
 services:
   prometheus:

@@ -1,5 +1,3 @@
-version: "3"
-
 services:
   rss-bridge:
     image: docker.io/rssbridge/rss-bridge:latest
