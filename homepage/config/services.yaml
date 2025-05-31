@@ -1,14 +1,14 @@
 - Media:
   - Jellyfin:
       icon: jellyfin
-      href: http://localhost/
+      href: http://localhost/jellyfin
       description: Media system
       server: this-server
       container: jellyfin
 
   - CommaFeed:
       icon: commafeed
-      href: http://localhost/
+      href: http://localhost/commafeed
       description: RSS reader
       server: this-server
       container: commafeed
@@ -17,14 +17,14 @@
 - Monitoring:
   - Grafana:
       icon: grafana
-      href: http://localhost/
+      href: http://localhost/grafana
       description: Data analytics
       server: this-server
       container: grafana
 
   - Prometheus:
       icon: prometheus
-      href: http://localhost/
+      href: http://localhost/prometheus
       description: Event monitoring
       server: this-server
       container: prometheus
@@ -33,28 +33,28 @@
 - Tools:
   - qBitTorrent:
       icon: qbittorrent
-      href: http://localhost/
+      href: http://localhost/qbittorrent
       description: Torrent client
       server: this-server
       container: qbittorrent
 
   - CyberChef:
       icon: cyberchef
-      href: http://localhost/
+      href: http://localhost/cyberchef
       description: Cyber Swiss Army Knife
       server: this-server
       container: cyberchef
 
   - Syncthing:
       icon: syncthing
-      href: http://localhost/
+      href: http://localhost/syncthing
       description: File synchronization
       server: this-server
       container: syncthing
 
   - RSS-Bridge:
       icon: rss-bridge
-      href: http://localhost/
+      href: http://localhost/rss-bridge
       description: RSS feed generator
       server: this-server
       container: rss-bridge
