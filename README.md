@@ -15,11 +15,6 @@ so you should use them as an example only.
 
 
 ## Installation
-> **Warning:**
-> compose-spec v2.20.0 compatibility is required to use compose files
-> in the stack/ directory
-> ([source](https://github.com/compose-spec/compose-spec/blob/main/spec.md#include)).
-
 1. Ensure podman-compose or docker-compose are installed.
 2. Clone this repo.
 
