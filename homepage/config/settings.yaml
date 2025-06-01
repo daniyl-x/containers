@@ -10,18 +10,18 @@ target: _blank
 
 layout:
   # Services
-  Media: &s1
+  Media: &service-style1
     style: rows
     columns: 2
-  Monitoring: *s1
-  Tools:
+  Monitoring: *service-style1
+  Tools: &service-style2
     style: row
     columns: 4
 
   # Bookmarks
-  Documentation: &bm
+  Documentation: &bookmark-style
     style: column
     rows: 2
-  AI: *bm
-  Other: *bm
+  AI: *bookmark-style
+  Other: *bookmark-style
 
