@@ -17,6 +17,7 @@ layout:
   Tools: &service-style2
     style: row
     columns: 4
+  Homelab: *service-style2
 
   # Bookmarks
   Documentation: &bookmark-style
