@@ -5,6 +5,7 @@ services:
     volumes:
       - "./config/proxy_headers.conf:/etc/nginx/proxy_headers.conf:ro"
       - "./config/conf.d:/etc/nginx/conf.d:ro"
+      - "./config/services:/etc/nginx/services:ro"
     ports:
       - 80:80
       - 443:443
