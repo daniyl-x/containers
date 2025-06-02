@@ -10,8 +10,13 @@ services:
       - prometheus:/prometheus
     ports:
       - 9092:9090
+    networks:
+      - monitoring
     restart: "${RESTART_POLICY}"
 
 volumes:
   prometheus:
+networks:
+  monitoring:
+    name: monitoring
 

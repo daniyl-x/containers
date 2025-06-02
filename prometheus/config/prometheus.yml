@@ -11,8 +11,6 @@ scrape_configs:
   - job_name: node
     static_configs:
       - targets:
-        # node-exporter
-        # replace node-exporter with correct IP or DNS name
-        # "node-exporter" works only when running in the same compose
+        # node-exporter on this server
         - node-exporter:9100
 
