@@ -10,6 +10,10 @@ so you should use them as an example only.
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
+    - [The friendly manual](#the-friendly-manual)
+    - [File structure](#file-structure)
+    - [Environment variables](#environment-variables)
+    - [Running containers](#running-containers)
 - [Credits](#credits)
 - [License](#license)
 
@@ -20,9 +24,41 @@ so you should use them as an example only.
 
 
 ## Usage:
+### The friendly manual
 - [Podman](https://docs.podman.io/en/latest/markdown/podman-compose.1.html)
 - [podman-compose](https://github.com/containers/podman-compose)
 - [Docker & docker-compose](https://docs.docker.com/compose/)
+
+### File structure
+Each directory in the root of this repository corresponds to one containerized
+service and follows the next structure:
+```
+container-name/
+├── compose.yml
+└── config/
+    ├── some_config.conf
+    └── another_config.conf
+```
+Where `compose.yml` is [compose file](#the-friendly-manual), and `config/`
+directory is used for configuration files or directories, mounted to this
+container.
+
+### Environment variables
+In the root of this repository there is a file `.env` which is intentionally
+left there.\
+This file is used to define some highly reusable variables like PUID, PGID, TZ,
+etc., which are then inserted in `compose.yml` files.
+
+With podman-compose you can expect that `.env` will be read from your current
+directory, but docker compose may require to source it first:
+```sh
+. .env
+```
+
+### Running containers
+It is recommended to run containers from this repository, passing required
+`compose.yml` file to [podman-compose or docker-compose](#the-friendly-manual)
+(`-f container-name/compose.yml`).
 
 
 ## Credits
