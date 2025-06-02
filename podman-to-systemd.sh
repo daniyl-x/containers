@@ -18,7 +18,6 @@ for container_name in "$@"; do
     printf "[%s] Generating systemd service for %s\n" "$0" "$container_name"
     podman generate systemd --new \
         --name "$container_name" \
-        --restart-policy=always \
         --files
 done
 printf "\n"
