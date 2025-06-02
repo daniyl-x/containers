@@ -1,3 +1,6 @@
 # Do not exclude .env
 !.env
 
+nginx/config/ssl/*
+!nginx/config/ssl/.gitkeep
+

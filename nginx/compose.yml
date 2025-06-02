@@ -6,6 +6,7 @@ services:
       - "./config/proxy_headers.conf:/etc/nginx/proxy_headers.conf:ro"
       - "./config/conf.d:/etc/nginx/conf.d:ro"
       - "./config/services:/etc/nginx/services:ro"
+      - "./config/ssl:/etc/nginx/ssl:ro"
     ports:
       - 80:80
       - 443:443
