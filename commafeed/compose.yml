@@ -6,6 +6,8 @@ services:
       PUID: "${PUID}"
       PGID: "${PGID}"
       TZ: "${TZ}"
+      # Enable access to local addresses to use rss-bridge links
+      COMMAFEED_HTTP_CLIENT_BLOCK_LOCAL_ADDRESSES: false
     volumes:
       - "${VOLUME_PREFIX}/commafeed:/commafeed/data"
     ports:
