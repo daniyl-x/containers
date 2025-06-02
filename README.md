@@ -14,6 +14,7 @@ so you should use them as an example only.
     - [File structure](#file-structure)
     - [Environment variables](#environment-variables)
     - [Running containers](#running-containers)
+    - [Starting Podman containers on boot](#starting-podman-containers-on-boot)
 - [Credits](#credits)
 - [License](#license)
 
@@ -59,6 +60,24 @@ directory, but docker compose may require to source it first:
 It is recommended to run containers from this repository, passing required
 `compose.yml` file to [podman-compose or docker-compose](#the-friendly-manual)
 (`-f container-name/compose.yml`).
+
+### Starting Podman containers on boot
+Podman containers can be converted to systemd services.\
+To do this, you need to:
+
+1. Create a container with Podman/podman-compose.
+2. Use [provided script](podman-to-systemd.sh) to generate, move to correct
+place, and enable systemd service.
+
+Example:
+```sh
+# Create two containers from compose files
+podman-compose -f homepage/compose.yml up -d
+podman-compose -f jellyfin/compose.yml up -d
+
+# Use script to handle systemd service generation and config
+./podman-to-systemd.sh homepage jellyfin
+```
 
 
 ## Credits
