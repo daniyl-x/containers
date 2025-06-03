@@ -3,8 +3,8 @@ services:
     image: docker.io/library/nginx:latest
     container_name: nginx
     volumes:
-      - "./config/proxy_headers.conf:/etc/nginx/proxy_headers.conf:ro"
       - "./config/conf.d:/etc/nginx/conf.d:ro"
+      - "./config/proxy:/etc/nginx/proxy:ro"
       - "./config/services:/etc/nginx/services:ro"
       - "./config/ssl:/etc/nginx/ssl:ro"
     ports:
