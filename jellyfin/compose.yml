@@ -9,7 +9,7 @@ services:
     volumes:
       - "${VOLUME_PREFIX}/jellyfin:/config"
       - "${MEDIA_PREFIX}/anime:/data/anime"
-      - "${MEDIA_PREFIX}/cartoons:/data/cartoons"
+      - "${MEDIA_PREFIX}/animation:/data/animation"
       - "${MEDIA_PREFIX}/movies:/data/movies"
       - "${MEDIA_PREFIX}/series:/data/series"
     ports:
