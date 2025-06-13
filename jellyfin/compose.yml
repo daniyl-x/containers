@@ -8,8 +8,8 @@ services:
       TZ: "${TZ}"
     volumes:
       - "${VOLUME_PREFIX}/jellyfin:/config"
+      - "${MEDIA_PREFIX}/animated-movies:/data/animated-movies"
       - "${MEDIA_PREFIX}/anime:/data/anime"
-      - "${MEDIA_PREFIX}/animation:/data/animation"
       - "${MEDIA_PREFIX}/movies:/data/movies"
       - "${MEDIA_PREFIX}/series:/data/series"
     ports:
