@@ -1,18 +1,19 @@
 services:
   jellyfin:
-    image: lscr.io/linuxserver/jellyfin:latest
+    image: docker.io/jellyfin/jellyfin:latest
     container_name: jellyfin
-    environment:
-      PUID: "${PUID}"
-      PGID: "${PGID}"
-      TZ: "${TZ}"
     volumes:
       - "${VOLUME_PREFIX}/jellyfin:/config"
+
       - "${MEDIA_PREFIX}/animated-movies:/data/animated-movies"
       - "${MEDIA_PREFIX}/anime:/data/anime"
       - "${MEDIA_PREFIX}/movies:/data/movies"
       - "${MEDIA_PREFIX}/series:/data/series"
     ports:
       - 8096:8096
+    devices:
+      - /dev/dri:/dev/dri
+    group_add:
+      - keep-groups
     restart: "${RESTART_POLICY}"
 
