@@ -4,6 +4,7 @@ services:
     container_name: jellyfin
     volumes:
       - "${VOLUME_PREFIX}/jellyfin:/config"
+      - "${TRANSCODES_PATH}:/cache/transcodes"
 
       - "${MEDIA_PREFIX}/animated-movies:/data/animated-movies"
       - "${MEDIA_PREFIX}/anime:/data/anime"
