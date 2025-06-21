@@ -8,6 +8,7 @@ services:
 
       - "${MEDIA_PREFIX}/animated-movies:/data/animated-movies"
       - "${MEDIA_PREFIX}/anime:/data/anime"
+      - "${MEDIA_PREFIX}/b-movies:/data/b-movies"
       - "${MEDIA_PREFIX}/movies:/data/movies"
       - "${MEDIA_PREFIX}/series:/data/series"
     ports:
