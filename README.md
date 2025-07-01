@@ -15,7 +15,6 @@ so you should use them as an example only.
     - [Environment variables](#environment-variables)
     - [Running containers](#running-containers)
     - [Starting Podman containers on boot](#starting-podman-containers-on-boot)
-- [Credits](#credits)
 - [License](#license)
 
 
@@ -78,10 +77,6 @@ podman-compose -f jellyfin/compose.yml up -d
 # Use script to handle systemd service generation and config
 ./podman-to-systemd.sh homepage jellyfin
 ```
-
-
-## Credits
-- linuxserver.io for their images and documentation
 
 
 ## License
