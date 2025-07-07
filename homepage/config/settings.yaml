@@ -10,19 +10,17 @@ target: _blank
 
 layout:
   # Services
-  Media: &service-style1
-    style: rows
-    columns: 2
-  Monitoring: *service-style1
-  Tools: &service-style2
+  Media: &row-4col
     style: row
     columns: 4
-  Homelab: *service-style2
+  Monitoring: *row-4col
+  Tools: *row-4col
+  Homelab: *row-4col
 
   # Bookmarks
-  Documentation: &bookmark-style
+  Documentation: &col-2row
     style: column
     rows: 2
-  AI: *bookmark-style
-  Other: *bookmark-style
+  AI: *col-2row
+  Other: *col-2row
 
