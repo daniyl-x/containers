@@ -3,10 +3,6 @@ services:
     image: lscr.io/linuxserver/firefox:latest
     container_name: firefox
     environment:
-      # Leaving as default non-root user to avoid root
-      # PUID: "${PUID}"
-      # PGID: "${PGID}"
-      TZ: "${TZ}"
       START_DOCKER: false
       DISABLE_IPV6: true
       NO_DECOR: true
