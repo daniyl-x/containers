@@ -29,6 +29,11 @@
       server: this-server
       container: prometheus
 
+  - Scrutiny:
+      icon: scrutiny
+      href: /scrutiny
+      description: SMART monitoring
+
 
 - Tools:
   - qBitTorrent:
