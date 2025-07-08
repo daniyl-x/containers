@@ -11,7 +11,7 @@ services:
     cap_add:
       - SYS_RAWIO
     devices:
-      - /dev/sda
-      - /dev/sdb
+      - /dev/sda:/dev/sda
+      - /dev/sdb:/dev/sdb
     restart: "${RESTART_POLICY}"
 
