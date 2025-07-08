@@ -50,6 +50,13 @@
       server: this-server
       container: cyberchef
 
+  - IT-Tools:
+      icon: it-tools
+      href: /it-tools
+      description: Useful IT tools
+      server: this-server
+      container: it-tools
+
   - Syncthing:
       icon: syncthing
       href: /syncthing
