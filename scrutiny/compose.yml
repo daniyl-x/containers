@@ -12,5 +12,6 @@ services:
       - SYS_RAWIO
     devices:
       - /dev/sda
+      - /dev/sdb
     restart: "${RESTART_POLICY}"
 
