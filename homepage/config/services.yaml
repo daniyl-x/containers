@@ -50,6 +50,13 @@
       server: this-server
       container: cyberchef
 
+  - Stirling PDF:
+      icon: stirling-pdf
+      href: /stirling-pdf
+      description: PDF editor
+      server: this-server
+      container: stirling-pdf
+
   - IT-Tools:
       icon: it-tools
       href: /it-tools
