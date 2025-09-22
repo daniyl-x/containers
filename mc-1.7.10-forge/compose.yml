@@ -1,6 +1,6 @@
 services:
   mc-1.7.10-forge:
-    image: docker.io/itzg/mc-server:java8
+    image: docker.io/itzg/minecraft-server:java8
     container_name: mc-1.7.10-forge
     environment:
       TZ: "${TZ}"
