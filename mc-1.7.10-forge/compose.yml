@@ -3,16 +3,18 @@ services:
     image: docker.io/itzg/minecraft-server:java8
     container_name: mc-1.7.10-forge
     environment:
+      UID: "${PUID}"
+      GID: "${PGID}"
       TZ: "${TZ}"
+
       EULA: true
       ENABLE_ROLLING_LOGS: true
+      # Kick timeout in minutes
+      PLAYER_IDLE_TIMEOUT: 10
       # Don't send MS telemetry
       SNOOPER_ENABLED: false
       # Don't verify MS accounts
       ONLINE_MODE: false
-
-      # Kick timeout in minutes
-      PLAYER_IDLE_TIMEOUT: 10
 
       TYPE: "FORGE"
       VERSION: "1.7.10"
