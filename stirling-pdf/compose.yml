@@ -1,0 +1,12 @@
+services:
+  qbittorrent:
+    image: docker.stirlingpdf.com/stirlingtools/stirling-pdf:latest
+    container_name: stirling-pdf
+    environment:
+      DISABLE_ADDITIONAL_FEATURES: false
+      LANGS: "en_GB"
+      SYSTEM_ROOTURIPATH: "/stirling-pdf/"
+    ports:
+      - 8085:8080
+    restart: "${RESTART_POLICY}"
+
