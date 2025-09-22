@@ -1,0 +1,25 @@
+services:
+  minecraft-1.7.10-forge:
+    image: docker.io/itzg/minecraft-server:java8
+    container_name: minecraft-1.7.10-forge
+    environment:
+      TZ: "${TZ}"
+      EULA: true
+      ENABLE_ROLLING_LOGS: true
+      # Don't send MS telemetry
+      SNOOPER_ENABLED: false
+      # Don't verify MS accounts
+      ONLINE_MODE: false
+
+      PLAYER_IDLE_TIMEOUT: 180
+
+      TYPE: "FORGE"
+      VERSION: "1.7.10"
+    volumes:
+      - "${VOLUME_PREFIX}/minecraft-server:/data"
+    ports:
+      - 25565:25565
+    tty: true
+    stdin_open: true
+    restart: "${RESTART_POLICY}"
+
