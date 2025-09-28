@@ -1,0 +1,15 @@
+services:
+  wikijs:
+    image: ghcr.io/requarks/wiki:latest
+    container_name: wikijs
+    user: "${PUID}:${PGID}"
+    environment:
+      DB_TYPE: "sqlite"
+      DB_FILEPATH: "/wiki/data/db.sqlite"
+    volumes:
+      - "${VOLUME_PREFIX}/wikijs/data:/wiki/data"
+      - "${VOLUME_PREFIX}/wikijs/config:/wiki/config"
+    ports:
+      - 3002:3000
+    restart: "${RESTART_POLICY}"
+
